@@ -16,6 +16,8 @@ go get -u https://github.com/getwhitespace/etch
 ## Usage
 
 ```golang
+import . "https://github.com/getwhitespace/etch"
+
 func LoginForm() Component {
     return Form(Class("settings-form"),
         Label(
