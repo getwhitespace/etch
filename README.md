@@ -140,6 +140,31 @@ func Id(values ...any) Component
 
 ```
 
+## Benchmark
+
+Some numbers to get a rough idea about the performance
+
+| Simple html            |             |                 |              |                  |
+| ---------------------- | ----------- | --------------- | ------------ | ---------------- |
+| BenchmarkGolang-10     | 1596957     | 2237 ns/op      | 768 B/op     | 35 allocs/op     |
+| BenchmarkGolangText-10 | 5242645     | 689.1 ns/op     | 128 B/op     | 7 allocs/op      |
+| BenchmarkAce-10        | 903170      | 3939 ns/op      | 1120 B/op    | 40 allocs/op     |
+| BenchmarkAmber-10      | 1546660     | 2307 ns/op      | 848 B/op     | 36 allocs/op     |
+| BenchmarkMustache-10   | 2795353     | 1291 ns/op      | 1721 B/op    | 30 allocs/op     |
+| BenchmarkPongo2-10     | 2072678     | 1740 ns/op      | 2073 B/op    | 32 allocs/op     |
+| BenchmarkHandlebars-10 | 915727      | 3799 ns/op      | 3643 B/op    | 78 allocs/op     |
+| BenchmarkSoy-10        | 3295437     | 1084 ns/op      | 1224 B/op    | 19 allocs/op     |
+| BenchmarkJetHTML-10    | 8357434     | 432.3 ns/op     | 0 B/op       | 0 allocs/op      |
+| **BenchmarkEtch-10**   | **3727230** | **965.4 ns/op** | **896 B/op** | **23 allocs/op** |
+
+| Complex html                  |            |                |               |                   |
+| ----------------------------- | ---------- | -------------- | ------------- | ----------------- |
+| BenchmarkComplexGolang-10     | 174906     | 20419 ns/op    | 6540 B/op     | 290 allocs/op     |
+| BenchmarkComplexGolangText-10 | 405541     | 8637 ns/op     | 2233 B/op     | 107 allocs/op     |
+| BenchmarkComplexMustache-10   | 451724     | 7957 ns/op     | 7264 B/op     | 156 allocs/op     |
+| BenchmarkComplexJetHTML-10    | 846660     | 4145 ns/op     | 530 B/op      | 5 allocs/op       |
+| **BenchmarkComplexEtch-10**   | **636388** | **5686 ns/op** | **6204 B/op** | **124 allocs/op** |
+
 ## Roadmap-ish
 
 - Optionally indent output
