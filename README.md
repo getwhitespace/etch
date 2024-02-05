@@ -142,7 +142,7 @@ func Id(values ...any) Component
 
 ## Benchmark
 
-Some numbers to get a rough idea about the performance
+Some numbers to get a rough idea about the performance. Benchmark is taken from https://github.com/slinso/goTemplateBenchmark.
 
 | Simple html            |             |                 |              |                  |
 | ---------------------- | ----------- | --------------- | ------------ | ---------------- |
