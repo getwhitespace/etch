@@ -3,7 +3,7 @@
 Etch is a html generator that aims to be simple and reasonably fast.
 
 If you need to render some html but you don't want to learn yet another
-templating language and their idiosyncharies. Etch uses plain old go functions
+templating language and its idiosyncharies. Etch uses plain old go functions
 to define and render html. That means that everything is (reasonably) type-safe
 and there's no additional compilations step.
 
